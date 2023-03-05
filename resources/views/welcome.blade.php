@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"><!--Link to the general CSS style-->
-    <link rel="stylesheet" href="./css/index.css"><!--Link to the index specific CSS style-->
+    <link rel="stylesheet" href="../css/style.css"><!--Link to the general CSS style-->
+    <link rel="stylesheet" href="../css/index.css"><!--Link to the index specific CSS style-->
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"><!--Link to the family font-->
     <title>INDEX</title>
 </head>
@@ -15,16 +15,16 @@
 <header>
     <h1>WELCOME</h1>
     <h2>Let's get started</h2>
-    <img class="hz-logo" src="./img/index/logo.png" alt="HZ Logo">
+    <img class="hz-logo" src="../img/index/logo.png" alt="HZ Logo">
 </header>
 
 <nav>
     <ul class="nav">
-        <li class="nav"><a id="active" class="nav" href="index.html">Home</a></li>
-        <li class="nav"><a class="nav" href="/pages/profile.html">Profile</a></li>
-        <li class="nav"><a class="nav" href="/pages/dashboard.html">Dashboard</a></li>
-        <li class="nav"><a class="nav" href="/pages/faq.html">FAQ</a></li>
-        <li class="nav"><a class="nav" href="/pages/blog.html">Blog</a></li>
+        <li class="nav"><a id="active" class="nav" href="/">Home</a></li>
+        <li class="nav"><a class="nav" href="profile">Profile</a></li>
+        <li class="nav"><a class="nav" href="dashboard">Dashboard</a></li>
+        <li class="nav"><a class="nav" href="faq">FAQ</a></li>
+        <li class="nav"><a class="nav" href="blog">Blog</a></li>
     </ul>
 </nav>
 
@@ -49,10 +49,10 @@
             <p class="paragraph">My motivation is to become an excellent programmer capable of finding bugs or creating sophisticated solutions for other people's problems.</p>
             <p class="paragraph">I think ICT is the right study for me because when I was a kid I used to say that every day I would work in a different place, cause it would be exciting to try all the jobs (From being a firefighter to selling ice cream in Mcdonald's).</p>
             <p class="paragraph">However, the first time I programmed seeing that my code was capable of solving tasks, adding functionality, or creating new things made me feel very excited and I actually wanted to learn more.</p>
-            <img id="impossible-pic" src="./img/index/impossible.jpeg" alt="Everything is possible picture">
+            <img id="impossible-pic" src="../img/index/impossible.jpeg" alt="Everything is possible picture">
             <p class="paragraph">I know ICT is a challenging course. I took a computer science class in my school for two years, and it was sometimes frustrating to find errors in the code and not be able to solve them. Nevertheless, each mistake made me find a way how not to do it.</p>
             <p class="paragraph">In addition, there is no single valid solution. The same problem can be fixed in different ways, which is also interesting to see what each individual does. I like to learn from others and compare if their solutions are more practical.</p>
-            <img id="help-pic" src="./img/index/help.png" alt="Work smarter not harder picture">
+            <img id="help-pic" src="../img/index/help.png" alt="Work smarter not harder picture">
         </article>
     </div>
 </main>

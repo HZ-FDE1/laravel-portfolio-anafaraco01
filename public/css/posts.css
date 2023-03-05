@@ -1,0 +1,93 @@
+/*This CSS page gives some specific and common style to the posts pages*/
+
+article, h1{ /*Common styling for the posts*/
+    font-family: century-gothic;
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+h3{
+    font-size: 25px;
+}
+
+p, li{
+    font-size: 20px;
+}
+
+#world-pic{ /*Picture in the 'Study Choice' post*/
+    height: 240px;
+    margin-left: 140px;
+}
+
+article{
+    margin-left: 380px;
+}
+
+.strenghts, .weaknesses, .opportunities, .threats{ /*Specific styling for the 'Personal SWOT Analysis' post*/
+    height: 240px;
+    width: 240px;
+    padding: 40px;
+}
+
+.strenghts{
+    background-color: rgb(42, 165, 155);
+}
+
+.weaknesses{
+    background-color: rgb(92, 188, 109);
+}
+
+.opportunities{
+    background-color: rgb(42, 118, 165);
+}
+
+.threats{
+    background-color: rgb(75, 136, 34);
+}
+
+.column{ /*Class assigned for the columns*/
+    display:inline-block;
+    width:321px;
+    vertical-align:top;
+}
+
+#right-column{ /*ID assigned for the right column (weaknesses and threats)*/
+    margin-left: 20px;
+}
+
+article.feedback{ /*Class assigned to the article of the 'first feedback' post*/
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+article.programming-experience{ /*Class assigned to the article of the 'programming experience' post*/
+    margin-right: 380px;
+}
+
+article.ict-companies{ /*Class assigned to the article of the 'profession' post*/
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#google-pic, #nintendo-pic, #alibaba-pic{
+    height: 300px;
+}
+
+#google-pic, #alibaba-pic{
+    margin-left: 350px;
+}
+
+#nintendo-pic{
+    margin-left: 270px;
+}
+
+#alibaba-pic{
+    margin-bottom: 20px;
+}
+
+.citation{
+    text-align: center;
+}

@@ -121,6 +121,11 @@
                 </ul>
             </details>
         </article>
+        @foreach( $faqs as $faq)
+            <li>{{ $faq->question }}</li>
+            <h2>{{ $faq->answer }}</h2>
+        @endforeach
+
     </div>
 </main>
 

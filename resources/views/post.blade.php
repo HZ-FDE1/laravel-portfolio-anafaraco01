@@ -15,8 +15,8 @@
 
 </head>
 <body>
-    <h1>My Blog Post</h1>
+    <h1>{{ $post->title }}</h1>
 
-    <p>{{ $post }}</p>
+    <p>{{ $post->body }}</p>
 </body>
 </html>

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostsController;
 
 
 /*
@@ -19,20 +20,7 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::get('/posts/{post}',  function($post){
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
-
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+Route::get('/blog/{post}', [PostsController::class, 'show']);
 
 Route::get('/', [WelcomeController::class, 'show']);
 

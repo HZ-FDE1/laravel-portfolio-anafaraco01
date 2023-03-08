@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"><!--Link to the general CSS style-->
+@section('style')
     <link rel="stylesheet" href="/css/dashboard.css"><!--Link to the dashboard specific CSS style-->
-    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"><!--Link to the family font-->
-    <title>DASHBOARD</title>
-</head>
+@endsection
 
-<body>
-<header>
+@section('title')
+    <title>DASHBOARD</title>
+@endsection
+
+@section('header')
     <h1>DASHBOARD</h1>
     <h2>Ready to see your progress?</h2>
-</header>
+@endsection
 
-<nav>
-    <ul class="nav">
-        <li class="nav"><a class="nav" href="/">Home</a></li>
-        <li class="nav"><a class="nav" href="profile">Profile</a></li>
-        <li class="nav"><a id="active" class="nav" href="dashboard">Dashboard</a></li>
-        <li class="nav"><a class="nav" href="faq">FAQ</a></li>
-        <li class="nav"><a class="nav" href="blog">Blog</a></li>
-    </ul>
-</nav>
-
-<main>
+@section('content')
     <h1>ICT FIRST YEAR</h1>
     <table><!--The id 'done' is given to the current or completed subjects, the id 'fail' is given to failing classes and the id 'resit' is given to classes that need to be resited-->
         <tr><!--First Row, Headings-->
@@ -146,6 +132,5 @@
         <!--Red line that shows the NBSA boundary-->
         <div class="vertical-line"></div>
     </section>
-</main>
-</body>
-</html>
+@endsection
+

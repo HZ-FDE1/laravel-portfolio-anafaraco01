@@ -1,48 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css"><!--Link to the general CSS style-->
+@section('style')
     <link rel="stylesheet" href="../css/index.css"><!--Link to the index specific CSS style-->
-    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"><!--Link to the family font-->
-    <title>INDEX</title>
-</head>
+@endsection
 
-<body>
-<header>
+@section('title')
+    <title>INDEX</title>
+@endsection
+
+@section('header')
     <h1>WELCOME</h1>
     <h2>Let's get started</h2>
     <img class="hz-logo" src="../img/index/logo.png" alt="HZ Logo">
-</header>
+@endsection
 
-<nav>
-    <ul class="nav">
-        <li class="nav"><a id="active" class="nav" href="/">Home</a></li>
-        <li class="nav"><a class="nav" href="profile">Profile</a></li>
-        <li class="nav"><a class="nav" href="dashboard">Dashboard</a></li>
-        <li class="nav"><a class="nav" href="faq">FAQ</a></li>
-        <li class="nav"><a class="nav" href="blog">Blog</a></li>
-    </ul>
-</nav>
-
-<main class="container">
-    <div>
-        <aside>
-            <p class="aside-title">MENU</p>
-            <ul class="aside">
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/EN/6.-Regulations-Study-Programmes/CER-HZ-Bachelor-full-time-2022-2023-DEF-June-13.pdf" target="_blank">HZ HBO-ICT Course and Examination Regulations (CER)</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF2.pdf" target="_blank">Implementation Regulations (IR) of the HBO-ICT program</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://learn.hz.nl/my/" target="_blank">Learn Environment</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://teams.microsoft.com/_#/school/conversations/General?threadId=19:827654897ab746089c081f24aff1c984@thread.skype&ctx=channel" target="_blank">Teams environment of the study program</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.osiris-student.nl/#/voortgang/" target="_blank">Study progress</a></li>
-                <li class="aside"><a class="aside" href="https://github.com/HZ-HBO-ICT" target="_blank">HZ HBO-ICT Github Environment</a></li>
-            </ul>
-        </aside>
-    </div>
-
+@section('content')
     <div>
         <article>
             <h3> Does the HBO-ICT programme suits me?</h3>
@@ -55,13 +27,11 @@
             <img id="help-pic" src="../img/index/help.png" alt="Work smarter not harder picture">
         </article>
     </div>
-</main>
+@endsection
 
-<footer>
+@section('footer')
     <h4>CONTACT INFORMATION</h4>
     <p>Instagram: ana_ducoing</p>
     <p>Telephone Number: +31 6 53 29 80 83</p>
     <p>Email: ana.rivera432@yahoo.com.mx</p>
-</footer>
-</body>
-</html>
+@endsection

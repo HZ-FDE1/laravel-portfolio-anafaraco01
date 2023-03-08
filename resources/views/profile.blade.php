@@ -1,53 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css"><!--Link to the general CSS style-->
+@section('style')
     <link rel="stylesheet" href="../css/profile.css"><!--Link to the profile specific CSS style-->
-    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"><!--Link to the family font-->
-    <title>PROFILE</title>
-</head>
+@endsection
 
-<body>
-<header>
+@section('title')
+    <title>PROFILE</title>
+@endsection
+
+@section('header')
     <h1>PROFILE</h1>
     <h2>"You only live once"</h2>
-</header>
+@endsection
 
-<nav>
-    <ul class="nav">
-        <li class="nav"><a class="nav" href="/">Home</a></li>
-        <li class="nav"><a id="active" class="nav" href="profile">Profile</a></li>
-        <li class="nav"><a class="nav" href="dashboard">Dashboard</a></li>
-        <li class="nav"><a class="nav" href="faq">FAQ</a></li>
-        <li class="nav"><a class="nav" href="blog">Blog</a></li>
+
+@section('second_aside_menu')
+    <p class="aside-title">CONTENTS</p>
+    <ul class="aside">
+        <li class="aside" id="link-border"><a class="aside" href="#personal-info">Personal Information</a></li>
+        <li class="aside" id="link-border"><a class="aside" href="#pre-education">Pre-education</a></li>
+        <li class="aside"><a class="aside" href="#extra-curricular-act">Extra-curricular Activities</a></li>
     </ul>
-</nav>
+@endsection
 
-<main class="container">
-    <div>
-        <aside>
-            <p class="aside-title">MENU</p>
-            <ul class="aside">
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/EN/6.-Regulations-Study-Programmes/CER-HZ-Bachelor-full-time-2022-2023-DEF-June-13.pdf" target="_blank">HZ HBO-ICT Course and Examination Regulations (CER)</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF2.pdf" target="_blank">Implementation Regulations (IR) of the HBO-ICT program</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://learn.hz.nl/my/" target="_blank">Learn Environment</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://teams.microsoft.com/_#/school/conversations/General?threadId=19:827654897ab746089c081f24aff1c984@thread.skype&ctx=channel" target="_blank">Teams environment of the study program</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="https://hz.osiris-student.nl/#/voortgang/" target="_blank">Study progress</a></li>
-                <li class="aside"><a class="aside" href="https://github.com/HZ-HBO-ICT" target="_blank">HZ HBO-ICT Github Environment</a></li>
-            </ul>
-            <p class="aside-title">CONTENTS</p>
-            <ul class="aside">
-                <li class="aside" id="link-border"><a class="aside" href="#personal-info">Personal Information</a></li>
-                <li class="aside" id="link-border"><a class="aside" href="#pre-education">Pre-education</a></li>
-                <li class="aside"><a class="aside" href="#extra-curricular-act">Extra-curricular Activities</a></li>
-            </ul>
-        </aside>
-    </div>
-
+@section('content')
     <div>
         <article class="personal-info"><!--Personal Information-->
             <h1 class="title">WHO</h1>
@@ -117,6 +93,5 @@
             <pre>Sing</pre>
         </article>
     </div>
-</main>
-</body>
-</html>
+@endsection
+

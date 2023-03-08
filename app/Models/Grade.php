@@ -11,6 +11,8 @@ class Grade extends Model
 
     public function addResult($grade)
     {
+        $this->refresh();
+
         if ($this->best_grade < $grade){
             $this->best_grade = $grade;
         }

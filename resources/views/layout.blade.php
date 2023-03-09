@@ -19,10 +19,10 @@
 <nav>
     <ul class="nav">
         <li class="nav"><a class="nav"  id="{{ Request::path() === '/' ? 'active': '' }}" href="/">Home</a></li>
-        <li class="nav"><a class="nav" id="{{ Request::path() === 'profile' ? 'active': '' }}" href="profile">Profile</a></li>
-        <li class="nav"><a class="nav" id="{{ Request::path() === 'dashboard' ? 'active': '' }}" href="dashboard">Dashboard</a></li>
-        <li class="nav"><a class="nav" id="{{ Request::path() === 'faq' ? 'active': '' }}" href="faq">FAQ</a></li>
-        <li class="nav"><a class="nav" id="{{ Request::path() === 'blog' ? 'active': '' }}" href="blog">Blog</a></li>
+        <li class="nav"><a class="nav" id="{{ Request::path() === 'profile' ? 'active': '' }}" href="/profile">Profile</a></li>
+        <li class="nav"><a class="nav" id="{{ Request::path() === 'dashboard' ? 'active': '' }}" href="/dashboard">Dashboard</a></li>
+        <li class="nav"><a class="nav" id="{{ Request::path() === 'faq' ? 'active': '' }}" href="/faq">FAQ</a></li>
+        <li class="nav"><a class="nav" id="{{ Request::path() === 'blog' ? 'active': '' }}" href="/blog">Blog</a></li>
     </ul>
 </nav>
 

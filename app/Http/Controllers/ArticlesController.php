@@ -16,10 +16,10 @@ class ArticlesController extends Controller
         return view('articles.index', ['articles'=>$articles]);
     }
 
-    public function show($article)
+    public function show(Article $blog)
     {
         // show a single resource
-        return view('articles.show', ['article' => Article::find($article)]);
+        return view('articles.show', ['article' => $blog]);
     }
 
     public function create()
@@ -38,33 +38,24 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit($article)
+    public function edit(Article $blog)
     {
         // Show a view to edit an existing resource
-        return view('articles.edit', ['article' => Article::find($article)]);
+        return view('articles.edit', compact('blog'));
     }
 
-    public function update(Article $article)
+    public function update(Article $blog)
     {
         // Persist the edited resource
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
+        $blog->update($this->validateArticle());
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->save();
-
-        return redirect('/blog/' . $article->id);
+        return redirect('/blog/' . $blog->id);
     }
 
     public function destroy($id)
     {
         // Delete the resource
-        Article::find($id)->delete();
+        Article::findOrFail($id)->delete();
 
         return redirect('/blog');
     }

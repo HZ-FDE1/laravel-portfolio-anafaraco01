@@ -22,15 +22,14 @@ use App\Http\Controllers\ArticlesController;
 */
 
 Route::get('/', [WelcomeController::class, 'show']);
-
 Route::get('/profile', [ProfileController::class, 'show']);
-
 Route::get('/dashboard', [DashboardController::class, 'show']);
-
 Route::get('/faq', [FAQController::class, 'show']);
-
 Route::get('/blog', [BlogController::class, 'show']);
 
 Route::get('/blog', [ArticlesController::class, 'index']);
-
+Route::get('/blog/create', [ArticlesController::class, 'create']);
+Route::post('/blog', [ArticlesController::class, 'store']);
 Route::get('/blog/{post}', [ArticlesController::class, 'show']);
+Route::get('/blog/{post}/edit', [ArticlesController::class, 'edit']);
+Route::put('/blog/{post}', [ArticlesController::class, 'update']);

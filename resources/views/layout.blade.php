@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css"><!--Link to the general CSS style-->
+    <link rel="stylesheet" href="/css/style.css"><!--Link to the general CSS style-->
     @yield('style')
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"><!--Link to the family font-->
     @yield('title')

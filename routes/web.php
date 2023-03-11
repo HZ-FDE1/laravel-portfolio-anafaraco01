@@ -25,20 +25,6 @@ Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/faq', [FAQController::class, 'show']);
-Route::get('/blog', [BlogController::class, 'show']);
 
-// Create
-Route::get('/blog/create', [ArticlesController::class, 'create']);
-Route::post('/blog', [ArticlesController::class, 'store']);
-
-// Read
-Route::get('/blog', [ArticlesController::class, 'index']);
-Route::get('/blog/{article}', [ArticlesController::class, 'show']);
-
-// Update
-Route::get('/blog/{article}/edit', [ArticlesController::class, 'edit']);
-Route::put('/blog/{post}', [ArticlesController::class, 'update']);
-
-// Delete
-Route::delete('/blog/{id}', [ArticlesController::class, 'destroy']);
+Route::resource('/blog', ArticlesController::class);
 

@@ -42,6 +42,12 @@
                 </div>
             </form>
 
+            <form method="POST" action="/blog/{{ $article->id }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
+            </form>
+
         </div>
     </div>
 @endsection

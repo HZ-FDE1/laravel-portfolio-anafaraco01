@@ -16,12 +16,9 @@ class ArticlesController extends Controller
         return view('articles.index', ['articles'=>$articles]);
     }
 
-    public function show($id)
+    public function show(Article $article)
     {
         // show a single resource
-
-        $article = Article::find($id);
-
         return view('articles.show', ['article'=>$article]);
     }
 
@@ -35,56 +32,44 @@ class ArticlesController extends Controller
     {
         // persist or handles the new resource
 
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
-
-        $article = new Article();
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
+        Article::create($this->validateArticle());
 
         return redirect('/blog');
 
     }
 
-    public function edit($id)
+    public function edit(Article $article)
     {
-        // Find the article with that if
-        $article = Article::find($id);
-
         // Show a view to edit an existing resource
         return view('articles.edit', compact('article'));
     }
 
-    public function update($id)
+    public function update(Article $article)
     {
         // Persist the edited resource
 
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
-
-        $article = Article::find($id);
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
+        $article->update($this->validateArticle());
 
         return redirect('/blog/' . $article->id);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
         // Delete the resource
+        Article::find($id)->delete();
+
+        return redirect('/blog');
+    }
+
+    /**
+     * @return array
+     */
+    public function validateArticle(): array
+    {
+        return request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }

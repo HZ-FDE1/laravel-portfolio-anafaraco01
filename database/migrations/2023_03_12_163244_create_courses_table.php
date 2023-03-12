@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('grades', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('test_name');
-            $table->float('weighing_factor');
-            $table->decimal('lowest_passing_grade', 3, 1)->default(5.5)->comment('Lowest grade to pass so average calculations can be applied');
-            $table->decimal('best_grade', 3, 1)->nullable();
+            $table->string('cu_code');
+            $table->string('name');
+            $table->decimal('credits');
+            $table->timestamp('passed_at')->nullable()->comment('Date that the grade was larger than or equal to the lowest passing grade');
             $table->timestamps();
-
-            $table->foreignId('course_id')->onDelete('cascade');
         });
     }
 
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grades');
+        Schema::dropIfExists('courses');
     }
 };

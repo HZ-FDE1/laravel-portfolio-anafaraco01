@@ -11,6 +11,11 @@ class Grade extends Model
 
     protected $guarded = [];
 
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
     public function path()
     {
         return route('dashboard.show', $this);

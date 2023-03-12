@@ -8,6 +8,7 @@ use App\Http\Controllers\FAQController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\GradeController;
 
 
 /*
@@ -23,8 +24,8 @@ use App\Http\Controllers\ArticlesController;
 
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
-Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/faq', [FAQController::class, 'show']);
 
 Route::resource('/blog', ArticlesController::class);
+Route::resource('/dashboard', GradeController::class);
 

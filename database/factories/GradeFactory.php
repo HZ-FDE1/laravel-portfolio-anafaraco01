@@ -17,7 +17,8 @@ class GradeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'course_name' => $this->faker->text(20),
+            'test_name' => $this->faker->text(20)
         ];
     }
 }

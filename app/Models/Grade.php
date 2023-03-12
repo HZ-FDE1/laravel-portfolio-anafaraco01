@@ -21,6 +21,6 @@ class Grade extends Model
             $this->passed_at = now();
         }
 
-       $this->save();
+        $this->save();
     }
 }

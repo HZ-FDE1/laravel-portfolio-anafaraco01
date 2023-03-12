@@ -85,7 +85,7 @@ class GradeController extends Controller
         return $request->validate([
             'course_name' => 'required',
             'test_name' => 'required',
-            'best_grade' => 'numeric|between: 0 , 10'
+            'best_grade' => 'nullable|numeric|between: 0 , 10'
         ]);
     }
 }

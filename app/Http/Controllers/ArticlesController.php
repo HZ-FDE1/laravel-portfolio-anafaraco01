@@ -28,11 +28,11 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
         // persist or handles the new resource
 
-        Article::create($this->validateArticle());
+        Article::create($this->validateArticle($request));
 
         return redirect(route('blog.index'));
 
@@ -44,10 +44,10 @@ class ArticlesController extends Controller
         return view('articles.edit', compact('blog'));
     }
 
-    public function update(Article $blog)
+    public function update(Article $blog, Request $request)
     {
         // Persist the edited resource
-        $blog->update($this->validateArticle());
+        $blog->update($this->validateArticle($request));
 
         return redirect($blog->path());
     }
@@ -63,9 +63,9 @@ class ArticlesController extends Controller
     /**
      * @return array
      */
-    public function validateArticle(): array
+    public function validateArticle(Request $request): array
     {
-        return request()->validate([
+        return $request->validate([
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required'

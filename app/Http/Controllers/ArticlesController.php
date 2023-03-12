@@ -34,7 +34,7 @@ class ArticlesController extends Controller
 
         Article::create($this->validateArticle());
 
-        return redirect('/blog');
+        return redirect(route('blog.index'));
 
     }
 
@@ -49,7 +49,7 @@ class ArticlesController extends Controller
         // Persist the edited resource
         $blog->update($this->validateArticle());
 
-        return redirect('/blog/' . $blog->id);
+        return redirect($blog->path());
     }
 
     public function destroy($id)

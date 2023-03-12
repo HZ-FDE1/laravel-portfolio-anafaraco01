@@ -27,7 +27,7 @@
             @foreach($articles as $article)
                 <details open><!--Open drop down that shows the summary of the post-->
                     <summary id="study-choice">{{ $article->title }}</summary>
-                    <p>{{ $article->excerpt }} <a class="read-more" target="_blank" href="/blog/{{ $article->id }}">read more</a></p>
+                    <p>{{ $article->excerpt }} <a class="read-more" target="_blank" href="{{ $article->path() }}">read more</a></p>
                 </details>
             @endforeach
 

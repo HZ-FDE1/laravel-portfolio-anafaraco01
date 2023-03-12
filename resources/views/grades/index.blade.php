@@ -26,7 +26,14 @@
                 <td>{{ $grade->course_name }}</td>
                 <td>{{ $grade->test_name }}</td>
                 <td>{{ $grade->best_grade }}</td>
+                <td><form method="POST" action="/dashboard/{{ $grade->id }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
+
         @endforeach
     </table>
 

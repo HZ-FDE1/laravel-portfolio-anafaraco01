@@ -9,6 +9,12 @@ class Grade extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
+    public function path()
+    {
+        return route('dashboard.show', $this);
+    }
     public function addResult($grade)
     {
         $this->refresh();

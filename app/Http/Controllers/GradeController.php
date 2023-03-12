@@ -26,7 +26,7 @@ class GradeController extends Controller
      */
     public function create()
     {
-        //
+        return view('grades.create');
     }
 
     /**
@@ -37,18 +37,9 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        Grade::create($this->validateGrade($request));
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return redirect(route('dashboard.index'));
     }
 
     /**
@@ -57,9 +48,9 @@ class GradeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Grade $dashboard)
     {
-        //
+        return view('grades.edit', compact('dashboard'));
     }
 
     /**
@@ -69,9 +60,11 @@ class GradeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Grade $dashboard)
     {
-        //
+        $dashboard->update($this->validateGrade($request));
+
+        return redirect('/dashboard');
     }
 
     /**
@@ -82,6 +75,17 @@ class GradeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Grade::findOrFail($id)->delete();
+
+        return redirect('/dashboard');
+    }
+
+    public function validateGrade(Request $request)
+    {
+        return $request->validate([
+            'course_name' => 'required',
+            'test_name' => 'required',
+            'best_grade' => 'numeric|between: 0 , 10'
+        ]);
     }
 }

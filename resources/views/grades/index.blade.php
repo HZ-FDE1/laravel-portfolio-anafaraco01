@@ -2,6 +2,7 @@
 
 @section('style')
     <link rel="stylesheet" href="/css/dashboard.css"><!--Link to the dashboard specific CSS style-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 @endsection
 
 @section('title')
@@ -14,16 +15,15 @@
 @endsection
 
 @section('content')
+    @include('grades.notifications')
     <h1>ICT FIRST YEAR</h1>
     <table><!--The id 'done' is given to the current or completed subjects, the id 'fail' is given to failing classes and the id 'resit' is given to classes that need to be resited-->
         <tr><!--First Row, Headings-->
-            <th>Course Name</th>
             <th>Test Name</th>
             <th>Grade</th>
         </tr>
         @foreach($grades as $grade)
             <tr>
-                <td>{{ $grade->course_name }}</td>
                 <td>{{ $grade->test_name }}</td>
                 <td>{{ $grade->best_grade }}</td>
                 <td>
@@ -37,7 +37,6 @@
 
         @endforeach
     </table>
-
     <section><!--Progress Bar-->
         <h3>Progress Bar for EC</h3>
         <p id="nbsa">45 EC</p>
@@ -48,5 +47,6 @@
         <!--Red line that shows the NBSA boundary-->
         <div class="vertical-line"></div>
     </section>
+    <script src="/js/notification.js" type="text/javascript"></script>
 @endsection
 

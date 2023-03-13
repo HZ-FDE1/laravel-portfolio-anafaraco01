@@ -64,7 +64,7 @@ class GradeController extends Controller
     {
         $dashboard->update($this->validateGrade($request));
 
-        return redirect('/dashboard');
+        return redirect('/dashboard')->with('status', 'Grade updated!');
     }
 
     /**
@@ -83,7 +83,6 @@ class GradeController extends Controller
     public function validateGrade(Request $request)
     {
         return $request->validate([
-            'course_name' => 'required',
             'test_name' => 'required',
             'best_grade' => 'nullable|numeric|between: 0 , 10'
         ]);

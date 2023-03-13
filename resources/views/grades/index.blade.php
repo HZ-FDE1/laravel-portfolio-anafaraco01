@@ -30,13 +30,13 @@
                     <form method="POST" action="/dashboard/{{ $grade->id }}">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Delete</button>
+                        <button onclick="return confirm('{{ ('Are you sure you want to delete?') }}')">Delete</button>
                     </form>
                 </td>
             </tr>
-
         @endforeach
     </table>
+    {{ $grades->links() }}
     <section><!--Progress Bar-->
         <h3>Progress Bar for EC</h3>
         <p id="nbsa">45 EC</p>

@@ -26,6 +26,7 @@
             <tr>
                 <td>{{ $grade->test_name }}</td>
                 <td>{{ $grade->best_grade }}</td>
+                <td><a href="{{ route('dashboard.edit', [$grade->id]) }}">Edit</a></td>
                 <td>
                     <form method="POST" action="/dashboard/{{ $grade->id }}">
                         @csrf

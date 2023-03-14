@@ -67,6 +67,7 @@ class GradeController extends Controller
         return redirect('/dashboard')->with('status', 'Grade updated!');
     }
 
+
     /**
      * Remove the specified resource from storage.
      *

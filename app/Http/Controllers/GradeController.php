@@ -14,7 +14,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        $grades = Grade::Paginate(20);
+        $grades = Grade::simplePaginate(20);
 
         return view('grades.index', ['grades'=>$grades]);
     }

@@ -1,0 +1,136 @@
+@extends('layout')
+
+@section('style')
+    <link rel="stylesheet" href="/css/dashboard.css"><!--Link to the dashboard specific CSS style-->
+@endsection
+
+@section('title')
+    <title>DASHBOARD</title>
+@endsection
+
+@section('header')
+    <h1>DASHBOARD</h1>
+    <h2>Ready to see your progress?</h2>
+@endsection
+
+@section('content')
+    <h1>ICT FIRST YEAR</h1>
+    <table><!--The id 'done' is given to the current or completed subjects, the id 'fail' is given to failing classes and the id 'resit' is given to classes that need to be resited-->
+        <tr><!--First Row, Headings-->
+            <th>Semester</th>
+            <th>Block</th>
+            <th>Course</th>
+            <th>EC</th>
+            <th>Exam</th>
+            <th>Grade</th>
+        </tr>
+        <tr><!--Block 1-->
+            <td class="headings" rowspan="6" id="done">1</td>
+            <td class="headings" rowspan="4" id="done">1<br>Computer Science</td>
+            <td id="done">Program- & Career Orientation (PCO)</td>
+            <td id="done">2.5</td>
+            <td id="done">Assessment website</td>
+            <td id="done">10</td>
+        </tr>
+        <tr>
+            <td id="done">Computer Science Basics (CSB)</td>
+            <td id="done">5</td>
+            <td id="done">Written knowledge test</td>
+            <td id="done">9.8</td>
+        </tr>
+        <tr>
+            <td id="done">Programming Basics (PBA)</td>
+            <td id="done">5</td>
+            <td id="done">Case study exam</td>
+            <td id="done">9.8</td>
+        </tr>
+        <tr>
+            <td id="done">IT Personality Project Week 1 (PPW1)</td>
+            <td id="done">1.25</td>
+            <td>Portfolio</td>
+            <td>Pass</td>
+        </tr>
+        <tr><!--Block 2-->
+            <td class="headings" rowspan="2" id="done">2<br>Game Development</td>
+            <td rowspan="2" id="done">Object-Oriented programming (OOP)</td>
+            <td rowspan="2" id="done">10</td>
+            <td id="done">Presentation</td>
+            <td id="done">8.3</td>
+        </tr>
+        <tr>
+            <td id="done">Case study exam</td>
+            <td id="done">10</td>
+        </tr>
+        <tr><!--Block 3-->
+            <td class="headings" rowspan="11">2</td>
+            <td class="headings" rowspan="4">3<br>Modern Software Development</td>
+            <td>Framework Development 1 (FDE1)</td>
+            <td>5</td>
+            <td>Case study exam</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td rowspan="3"> Framework Project 1 (FPR1)</td>
+            <td rowspan="3">7,5</td>
+            <td>Criterium based interview</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>Assignment</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>Case study exam</td>
+            <td>*</td>
+        </tr>
+        <tr><!--Block 4-->
+            <td class="headings" rowspan="7">4<br>Modern Software Development</td>
+            <td rowspan="3">Framework Project 2 (FPR2)</td>
+            <td rowspan="3">10</td>
+            <td>Final delivery</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>Report of acceptance tests and optional assessments</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>IT Development portfolio </td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>IT Personality International week (PIW)</td>
+            <td>1.25</td>
+            <td>Portfolio</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>IT Personality 2 (ITP2)</td>
+            <td>1.25</td>
+            <td>Portfolio</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Personal Professional Development: Exploration (PPD-E)(INT Class)</td>
+            <td rowspan="2">12,5</td>
+            <td>English Test</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>Criterium focused interview</td>
+            <td>*</td>
+        </tr>
+    </table>
+
+    <section><!--Progress Bar-->
+        <h3>Progress Bar for EC</h3>
+        <p id="nbsa">45 EC</p>
+        <!--60 EC is the maximum, the 'value' determines current EC obtained-->
+        <progress value="13.75" max="60"></progress>
+        <p id="nbsa-boundary">NBSA</p>
+        <p class="ec">13.75 EC</p>
+        <!--Red line that shows the NBSA boundary-->
+        <div class="vertical-line"></div>
+    </section>
+@endsection
+

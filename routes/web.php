@@ -1,6 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\GradeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +22,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}',  function($post){
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/profile', [ProfileController::class, 'show']);
+Route::get('/faq', [FAQController::class, 'show']);
 
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
+Route::resource('/blog', ArticlesController::class);
+Route::resource('/dashboard', GradeController::class);
 
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
